@@ -1,0 +1,6 @@
+com\ryhan\taskManager\controller\TaskController.class
+com\ryhan\taskManager\repository\TaskRepository.class
+com\ryhan\taskManager\enums\TaskStatus.class
+com\ryhan\taskManager\TaskManagerApplication.class
+com\ryhan\taskManager\entity\Task.class
+com\ryhan\taskManager\service\TaskService.class

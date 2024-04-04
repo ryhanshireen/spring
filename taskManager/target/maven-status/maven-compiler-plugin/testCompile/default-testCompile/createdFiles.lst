@@ -1,0 +1,5 @@
+com\ryhan\taskManager\service\TaskServiceTest.class
+com\ryhan\taskManager\TaskManagerApplicationTests.class
+com\ryhan\taskManager\controller\TaskControllerTest.class
+com\ryhan\taskManager\entity\TaskTest.class
+com\ryhan\taskManager\repository\TaskRepositoryTest.class
