@@ -1,0 +1,7 @@
+com\ryhan\soapclient\config\Client.class
+com\ryhan\soapclient\entity\UpdateStudentDetailsRequest.class
+com\ryhan\soapclient\config\Config.class
+com\ryhan\soapclient\entity\UpdateStudentDetailsResponse.class
+com\ryhan\soapclient\entity\ObjectFactory.class
+com\ryhan\soapclient\entity\package-info.class
+com\ryhan\soapclient\SoapclientApplication.class

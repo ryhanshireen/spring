@@ -1,0 +1,50 @@
+<wsdl:definitions name="UpdateStudentDetailsService" targetNamespace="urn:com:student:client:entity:updateStudentDetailsService" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:com:student:client:entity:updateStudentDetailsService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:types>
+        <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="urn:com:student:client:entity:updateStudentDetailsService" xmlns:entity="com.student.client.entity">
+            <s:element name="updateStudentDetailsRequest">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="StudentID" type="s:string"/>
+                        <s:element name="StudentName" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="updateStudentDetailsResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="status" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="updateStudentDetailsRequest">
+        <wsdl:part name="updateStudentDetailsRequest" element="tns:updateStudentDetailsRequest"/>
+    </wsdl:message>
+    <wsdl:message name="updateStudentDetailsResponse">
+        <wsdl:part name="updateStudentDetailsResponse" element="tns:updateStudentDetailsResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="updateStudentDetailsServicePortType">
+        <wsdl:operation name="updateStudentDetails">
+            <wsdl:input message="tns:updateStudentDetailsRequest"/>
+            <wsdl:output message="tns:updateStudentDetailsResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="updateStudentDetailsServiceSoapBinding" type="tns:updateStudentDetailsServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="updateStudentDetails">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal" namespace="urn:com:student:client:entity:updateStudentDetailsService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" namespace="urn:com:student:client:entity:updateStudentDetailsService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="UpdateStudentDetailsService">
+        <wsdl:port name="updateStudentDetailsServiceSoap" binding="tns:updateStudentDetailsServiceSoapBinding">
+            <soap:address location="http://localhost:8089/updateStudentDetailsService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
